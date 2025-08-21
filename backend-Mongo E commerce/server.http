@@ -1,0 +1,348 @@
+###Register
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "name": "ADMIN",
+  "email": "admin@gmail.com",
+  "password": "admin"
+}
+
+###login
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "admin.com",
+  "password": "admin",
+  "role": "admin"
+}
+
+
+###get user
+GET http://localhost:3000/user/689cc3dd023beffcc783ab1c
+
+###updateUser
+PUT http://localhost:3000/addCartItemInUserDetails/689cc3dd023beffcc783ab1c
+Content-Type: application/json
+
+{
+  "productId": "product1",
+  "quantity": 2,
+  "new": 2,
+  "old": "ads"
+}
+
+
+### order
+
+PUT http://localhost:3000/yourOrders/689cc3dd023beffcc783ab1c
+Content-Type: application/json
+
+{
+  "productId": "product1",
+  "quantity": 2,
+  "somthing": 5,
+  "somthing": 5,
+  "new": 2,
+  "old": "ads"
+}
+### empty cart
+
+DELETE http://localhost:3000/EmptyUserCart/689cc3dd023beffcc783ab1c
+
+### removecart items
+
+DELETE http://localhost:3000/removeCartItem/689cc3dd023beffcc783ab1c/cart/689c3fe5f9c1527475f2926d
+
+
+###dqw
+PUT http://localhost:3000/updateUser/689cc3dd023beffcc783ab1c
+Content-Type: application/json
+
+{
+  "userDatas": {
+    "cartList": { "item": 1, "name": "new" },
+    "yourOrders": { "item": 1, "name": "new" }
+  }
+}
+
+
+
+###addproducrt
+POST http://localhost:3000/addproduct
+Content-Type: application/json
+
+{
+  "title": "product6",
+  "price": 100,
+  "description": "product1 description",
+  "category": "category1",
+  "image": "imageurl",
+  "inStock": 50,
+  "inCart": false,
+  "rating": 5.5
+}
+
+### add all 
+
+POST  http://localhost:3000/addmanyproduct
+Content-Type: application/json
+
+[
+  {
+    "rating": 4.5,
+    "title": "Stylish Men's Backpack",
+    "price": 100,
+    "description": "A durable backpack for everyday use.",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+    "inStock": 50,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.0,
+    "title": "Men's Slim Fit Jacket",
+    "price": 120,
+    "description": "Comfortable and stylish slim-fit jacket.",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+    "inStock": 30,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 3.9,
+    "title": "Casual Cotton T-Shirt",
+    "price": 80,
+    "description": "Soft cotton t-shirt for casual wear.",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+    "inStock": 40,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.7,
+    "title": "Men's Hoodie",
+    "price": 150,
+    "description": "Cozy hoodie for chilly days.",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+    "inStock": 25,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.8,
+    "title": "Gold-Plated Ring",
+    "price": 250,
+    "description": "Elegant gold-plated ring for special occasions.",
+    "category": "jewelery",
+    "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png",
+    "inStock": 15,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.2,
+    "title": "Silver Chain Necklace",
+    "price": 140,
+    "description": "Shiny silver chain necklace.",
+    "category": "jewelery",
+    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png",
+    "inStock": 20,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.6,
+    "title": "Diamond Earrings",
+    "price": 400,
+    "description": "Elegant diamond-studded earrings.",
+    "category": "jewelery",
+    "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+    "inStock": 10,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 3.8,
+    "title": "Pearl Bracelet",
+    "price": 180,
+    "description": "Beautiful pearl bracelet for a classy look.",
+    "category": "jewelery",
+    "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png",
+    "inStock": 18,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.9,
+    "title": "Smartphone Model X",
+    "price": 900,
+    "description": "High-performance smartphone with modern features.",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+    "inStock": 12,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.5,
+    "title": "Wireless Headphones",
+    "price": 250,
+    "description": "Noise-cancelling wireless headphones.",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png",
+    "inStock": 22,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.4,
+    "title": "4K LED TV",
+    "price": 1200,
+    "description": "Ultra HD 4K LED television.",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png",
+    "inStock": 8,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.1,
+    "title": "Bluetooth Speaker",
+    "price": 120,
+    "description": "Portable Bluetooth speaker with deep bass.",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png",
+    "inStock": 26,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 3.7,
+    "title": "Gaming Laptop",
+    "price": 1500,
+    "description": "High-performance laptop for gaming.",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png",
+    "inStock": 6,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.6,
+    "title": "Women's Summer Dress",
+    "price": 90,
+    "description": "Lightweight summer dress for women.",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png",
+    "inStock": 35,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.3,
+    "title": "Women's Leather Jacket",
+    "price": 200,
+    "description": "Premium leather jacket for women.",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png",
+    "inStock": 15,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.2,
+    "title": "Women's Casual Hoodie",
+    "price": 130,
+    "description": "Comfortable hoodie for women.",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png",
+    "inStock": 20,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.8,
+    "title": "Women's Knit Sweater",
+    "price": 140,
+    "description": "Cozy knitted sweater for cold days.",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png",
+    "inStock": 28,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 3.9,
+    "title": "Women's Denim Jeans",
+    "price": 110,
+    "description": "High-quality denim jeans.",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png",
+    "inStock": 32,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.5,
+    "title": "Women's Handbag",
+    "price": 160,
+    "description": "Elegant handbag with spacious compartments.",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
+    "inStock": 18,
+    "inCart": false,
+    "__v": 0
+  },
+  {
+    "rating": 4.6,
+    "title": "Women's Sport Shoes",
+    "price": 150,
+    "description": "Comfortable and stylish sports shoes.",
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png",
+    "inStock": 24,
+    "inCart": false,
+    "__v": 0
+  }
+]
+
+
+
+
+
+
+###updateProduct
+PUT http://localhost:3000/updateproduct/689accacf22f9ec7efad3eb0
+Content-Type: application/json
+
+{
+  "title": "SINGLE",
+  "price": 1200,
+  "description": "new price"
+}
+
+###Delete PRODUCT
+
+DELETE http://localhost:3000/deleteproduct/689accacf22f9ec7efad3eb0
+
+###delete many
+
+DELETE http://localhost:3000/deleteManyProducts
+
+
+###get product
+
+GET http://localhost:3000/products/
+
+
+### get productby id
+
+
+GET http://localhost:3000/products/689b036a0e6433c44dfceb26
